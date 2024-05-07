@@ -1,0 +1,50 @@
+.about{
+    width:70vw;
+    margin:3rem auto;
+}
+.left{
+        font-size:1.5rem;
+        font-weight: 100;
+}
+.right{
+    margin:2rem 0;
+}
+.our-mission, .our-vission{
+
+    width:100%;
+    margin:1rem 0;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* body {background: green;} */
+    
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    /* body {background: blue;} */
+    .left{
+        width:40vw;
+        margin:0 2rem;
+    }
+    .our-mission, .our-vission{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    /* body {background: orange;} */
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    /* body {background: pink;} */
+  }

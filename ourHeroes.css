@@ -1,0 +1,115 @@
+.our-heroes{
+    width:70vw;
+    margin:3rem auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+ width:70vw;
+ max-width:380px;
+ margin:2rem auto;
+ display:flex;
+ flex-direction: column;
+}
+.hero h2{
+    display:none;
+}
+
+.profile-picture-container{
+    /* background-color:black; */
+    
+    height:auto;
+    display:flex;
+    justify-content: center;
+}
+.profile-picture{
+    /* width:70vw; */
+    height:auto;
+    max-height:250px;
+    object-fit: contain;
+}
+.hero-details{
+  /* background-color:white; */
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) and (orientation: landscape){
+    .example {background: red;}
+
+  } */
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* body {background: green;} */
+    /* .our-heroes{
+        max-width:60vw;
+    } */
+    .hero{
+        flex-direction: row;
+        flex-wrap:wrap
+    }
+    .hero h2 {
+        display: inline-block;
+        margin: 1rem;
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+    }
+    .hero-details span{
+        display:none;
+    }
+    .profile-picture{
+        width:20vw;
+    }
+  }
+
+  /* @media only screen and (min-width: 765px) and (max-width: 900px) {
+    .hero h2 {
+        font-size: 2.3rem;
+        line-height: 3.5rem;
+    }
+  } */
+  
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    /* body {background: blue;} */
+
+    .hero h2 {
+        font-size: 1.9rem;
+        line-height: 1.5rem;
+    }
+   
+    .our-heroes{
+        flex-direction: row;
+    }
+    .profile-picture-container{
+        width:40%;
+    }
+    .profile-picture{
+        width:100%;
+    }
+    .hero{
+        /* width:40%; */
+        margin:1rem;
+       }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    /* body {background: orange;} */
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    /* body {background: pink;} */
+  }

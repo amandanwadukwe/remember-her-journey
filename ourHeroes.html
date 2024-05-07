@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remember Her Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./pulsingCircle.css">
+    <link rel="stylesheet" href="./introduction.css">
+    <link rel="stylesheet" href="./chatbot.css">
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./ourHeroes.css">
+    <link rel="icon" type="image/x-icon" href="./favicon_io/favicon-32x32.png">
+    <meta name="description" content="We blend data and construction to modernize project planning. In a fast-changing industry, staying ahead means embracing new technologies and insights. That's where we come in, offering innovative solutions and data-driven strategies for the future of construction.">
+    <meta name="keywords" content="Cletus, Aduku, Construction, AI">
+    <meta name="author" content="Amanda Nwadukwe">
+
+    <script src="https://kit.fontawesome.com/9bb64d8c48.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="small-screen-header">
+        <nav class="primary-nav hide" id="primary-nav">
+            <ul>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./ourHeroes.html">Our Heroes</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
+        <i class="fa fa-bars" style="font-size:36px" id="hamburger" class="hamburger"></i>
+        <h1></h1>
+        
+    </header>
+    <header class="large-screen-header">
+        <nav class="primary-nav" id="primary-nav">
+            <ul>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./ourHeroes.html">Our Heroes</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
+        <h1></h1>
+        
+    </header>
+    <section class="search-container">
+        <!-- <section class="search-container"> -->
+            <Label for="search">
+                <input type="text" id="search" placeholder="" class="search" />
+            </Label>
+        <!-- </section> -->
+    </section>
+    <section class="our-heroes">
+        <div class="hero">
+            <div class="profile-picture-container">
+            <img class="profile-picture" src="./resources/miriammakeba3.jpg" alt=""/>
+            </div>
+            <h2><span>Miriam</span></br><span>Makeba</span></h2>
+            <div class="hero-details">
+                <span>Miriam Makeba</span>
+                <!-- <span class="catch">Mama Africa</span> -->
+                <p>Miriam Makeba, also known as "Mama Africa," was a renowned musician and anti-apartheid activist from South Africa. However, is that how she earned the title "Mama Africa"? Find out from Amanda</p>
+                <button type="button">More</button>
+            </div>
+        </div>
+        <!-- <div class="hero">
+            <div class="profile-picture-container">
+            <img class="profile-picture" src="./resources/miriammakeba3.jpg" alt=""/>
+            </div>
+            <h2><span>Miriam</span></br><span>Makeba</span></h2>
+            <div class="hero-details">
+                <span>Miriam Makeba</span>
+                <p>Miriam Makeba, also known as "Mama Africa," was a renowned musician and anti-apartheid activist from South Africa. However, is that how she earned the title "Mama Africa"? Find out from Amanda</p>
+                <button type="button">More</button>
+            </div>
+        </div> -->
+    </section>
+    <section class="help"><button type="button" id="help-button">?</button><div id="help-modal" class="help-modal">
+        <a href="#"><i class="fa-light fa-clipboard-question"></i>Frequently asked questions</a>
+        <!-- <a href="#">Quick chat with our AI chatbot</a> -->
+        <a href="#"><i class="fa-brands fa-instagram"></i> &nbsp; Send Instagram message</a>
+    </div></section>
+    <section class="chat">
+        <button id="chatBtn"><i class='far fa-comment-dots'></i></button>
+
+        <div id="chatModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="chatContainer">
+              <div id="chatOutput"></div>
+              <input type="text" id="userInput" placeholder="Type your message...">
+              <button id="sendBtn">Send</button>
+            </div>
+          </div>
+        </div>
+    </section>
+    <footer><p>Website by Amanda Nwadukwe</p><div class="dot"></div><p>@2023, Remember Her Journey, All rights reserved.</p><div class="dot"></div><p>07362405288</p><div class="dot"></div><p>rememberherjourney@gmail.com</p></footer>
+    
+    
+<script src="./index.js"></script>
+</body>
+</html>
