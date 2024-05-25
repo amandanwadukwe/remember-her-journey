@@ -60,8 +60,10 @@ primaryNavLinks.forEach(link => {
         currentQuestionIndex++;
       } else {
         showMessage("Thank you for reaching out. A member of our team will be with you shortly.");
-        setTimeout(modal.style.display = 'none',2000);
-        sendTranscript();
+        setTimeout(modal.style.display = 'none',3000);
+        let message = Array.from(document.getElementById('chatOutput').children).map(chat => chat.innerText).reduce((a,b)=> a+'</br>'+b);
+       
+        sendTranscript(message);
         sendConfirmationEmail();
       }
     }
@@ -89,6 +91,8 @@ primaryNavLinks.forEach(link => {
           }
         };
         xhr.send(JSON.stringify({ transcript: transcript }));
+
+        location.reload();
       
     }
     
@@ -128,13 +132,57 @@ primaryNavLinks.forEach(link => {
       }
     }
 
+    document.getElementById('search').addEventListener('input', function() {
+      const searchText = this.value.toLowerCase();
+      const heroes = document.querySelectorAll('.hero');
+      heroes.forEach(hero => {
+          const heroName = hero.querySelector('h2').innerText.toLowerCase();
+          const heroDetails = hero.querySelector('.hero-details').innerText.toLowerCase();
+          if (heroName.includes(searchText) || heroDetails.includes(searchText)) {
+              hero.style.display = 'block';
+          } else {
+              hero.style.display = 'none';
+          }
+      });
+  });
+  
 
-    // backButton.addEventListener("click", ()=>{
-    //   history.back()
-    // })
-    
-
-    // function sendTranscript(transcript) {
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('.faq-icon');
         
-    //   }
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            icon.textContent = '+';
+        } else {
+            document.querySelectorAll('.faq-answer').forEach(answer => answer.style.display = 'none');
+            document.querySelectorAll('.faq-icon').forEach(icon => icon.textContent = '+');
+            
+            answer.style.display = 'block';
+            icon.textContent = '-';
+        }
+    });
+});
+
+console.log("test", document.querySelectorAll('.faq-question'))
+
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const icon = question.querySelector('.faq-icon');
+      
+      if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          icon.textContent = '+';
+      } else {
+          document.querySelectorAll('.faq-answer').forEach(answer => answer.style.display = 'none');
+          document.querySelectorAll('.faq-icon').forEach(icon => icon.textContent = '+');
+          
+          answer.style.display = 'block';
+          icon.textContent = '-';
+      }
+  });
+});
+
       

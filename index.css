@@ -324,6 +324,51 @@ footer p{
     }
   } 
   
+  body {
+    font-family: Arial, sans-serif;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-icon {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.faq-title {
+    font-weight: bold;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 0;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     /* body {background: orange;} */
