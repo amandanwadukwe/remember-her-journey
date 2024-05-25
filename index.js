@@ -3,6 +3,7 @@ let primaryNav = document.getElementById("primary-nav");
 let hamburger = document.getElementById("hamburger");
 const helpButton = document.getElementById('help-button');
     const helpModal = document.getElementById('help-modal');
+    // const backButton = document.getElementById('back-button')
 
 hamburger.addEventListener("click", () => {
     primaryNav.classList.toggle("hide");
@@ -59,6 +60,7 @@ primaryNavLinks.forEach(link => {
         currentQuestionIndex++;
       } else {
         showMessage("Thank you for reaching out. A member of our team will be with you shortly.");
+        setTimeout(modal.style.display = 'none',2000);
         sendTranscript();
         sendConfirmationEmail();
       }
@@ -73,19 +75,21 @@ primaryNavLinks.forEach(link => {
     function sendTranscript(transcript) {
       // Send transcript to support email
       // Implementation not included in this example
-      const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'send_transcript.php', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+     
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:3000/send_transcript', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onreadystatechange = function () {
           if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-              console.log(xhr.responseText);
+              console.log('Transcript sent successfully');
             } else {
               console.error('Error sending transcript:', xhr.statusText);
             }
           }
         };
-        xhr.send('transcript=' + encodeURIComponent(transcript));
+        xhr.send(JSON.stringify({ transcript: transcript }));
+      
     }
     
     function sendConfirmationEmail() {
@@ -123,6 +127,11 @@ primaryNavLinks.forEach(link => {
         userInput.value = '';
       }
     }
+
+
+    // backButton.addEventListener("click", ()=>{
+    //   history.back()
+    // })
     
 
     // function sendTranscript(transcript) {
