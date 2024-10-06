@@ -91,6 +91,10 @@ h2{
 .blogPosts,.posts{
   width: 60%;
     margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 .blogForm{
@@ -138,6 +142,10 @@ button:hover{
     margin: auto;
     text-align: center;
 
+}
+.her-story-continued{
+  width:60vw;
+  margin:4rem auto;
 }
 .more{
   width:90vw;

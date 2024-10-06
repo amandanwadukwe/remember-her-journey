@@ -5,6 +5,8 @@ const helpButton = document.getElementById('help-button');
     const helpModal = document.getElementById('help-modal');
     // const backButton = document.getElementById('back-button')
 
+
+
 hamburger.addEventListener("click", () => {
     primaryNav.classList.toggle("hide");
 })
@@ -124,6 +126,10 @@ primaryNavLinks.forEach(link => {
     }
     
     window.onclick = function(event) {
+      if (event.target != helpModal && event.target != helpButton) {
+        helpModal.style.display = 'none';
+      }
+
       if (event.target == modal) {
         modal.style.display = 'none';
         currentQuestionIndex = 0;
@@ -131,6 +137,7 @@ primaryNavLinks.forEach(link => {
         userInput.value = '';
       }
     }
+
 
     document.getElementById('search').addEventListener('input', function() {
       const searchText = this.value.toLowerCase();
@@ -185,4 +192,4 @@ document.querySelectorAll('.faq-question').forEach(question => {
   });
 });
 
-      
+

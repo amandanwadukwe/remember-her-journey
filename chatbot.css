@@ -17,6 +17,8 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    min-width:70vw;
+    max-width:fit-content;
   }
   
   .close {
@@ -32,16 +34,44 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  .modal-content{
+    background-color:#ededed;
+  }
   
   #chatContainer {
-    height: 300px;
-    overflow-y: scroll;
+    height: fit-content;
+    /* overflow-y: scroll; */
+
   }
   
   #chatOutput {
     margin-bottom: 10px;
   }
   
+  #chatOutput  > *:nth-child(odd) {
+    width:fit-content;
+    max-width:20vw;
+    padding:1rem;
+    border-radius:1vmax;
+    font-size:.9rem;
+    background-color: #fff;
+    position: relative;
+    left:0;
+    margin:1rem 0;
+}
+#chatOutput  > *:nth-child(even) {
+    
+    width:fit-content;
+    max-width:20vw;
+    padding:1rem;
+    border-radius:1vmax;
+    font-size:.9rem;
+    background-color: #ad2f2f;
+    position: relative;
+    left:65%;
+    margin:1rem 0;
+}
   #userInput {
     width: calc(100% - 80px);
     padding: 1rem;

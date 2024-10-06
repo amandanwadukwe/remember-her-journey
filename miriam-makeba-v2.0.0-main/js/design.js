@@ -24,8 +24,8 @@ var functionalImg = document.getElementById("functional-img");
 window.addEventListener("scroll", function() {
     const beadSound = document.getElementById("beadSound");
     beadSound.play();
-    redCircle.style.transform = "rotate("+(window.pageYOffset /8)+"deg)";
+    redCircle.style.transform = "rotate("+(window.pageYOffset /20)+"deg)";
     redCircle.style.transition="transform .5s linear";
-    functionalImg.style.transform = "rotate(" +(-window.pageYOffset/4)+ "deg)";
+    functionalImg.style.transform = "rotate(" +(-window.pageYOffset/16)+ "deg)";
     // redCircle.style.transform = "rotate("+(window.pageYOffset - 10)+"deg)";
 });
