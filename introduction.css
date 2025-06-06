@@ -2,13 +2,14 @@
     width:60vw;
     max-width:60vw;
     margin:19vh auto;
+    margin-top:28vh;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     gap:2rem;
     text-align: center;
-    transform:scale(0.8);
+    /* transform:scale(0.8); */
 }
 
 
@@ -24,6 +25,7 @@
 
     .introduction {
         transform:scale(1);
+       
     }
 
 

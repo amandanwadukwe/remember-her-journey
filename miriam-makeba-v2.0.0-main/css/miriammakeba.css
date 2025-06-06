@@ -36,11 +36,15 @@ p{
 .main{
       width: 70vw;
     margin: auto;
+    margin-top:25vh;
     display:flex;
     flex-direction:column;
     align-items:center;
-    transform:scale(0.65);
+    transform:scale(0.85);
     /* margin-top:-7rem; */
+}
+main{
+  margin-top:7rem;
 }
 .main h1{
     color:#9daaa8;

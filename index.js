@@ -139,6 +139,37 @@ primaryNavLinks.forEach(link => {
     }
 
 
+    // Page reveal animation
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with reveal class
+  const revealElements = document.querySelectorAll('.reveal');
+  console.log('Found', revealElements.length, 'elements with reveal class');
+  
+  // Add active class after a small delay to trigger animation
+  setTimeout(() => {
+    revealElements.forEach(element => {
+      element.classList.add('activex');
+      console.log('Added active class to element', element);
+    });
+  }, 300); // Increased delay to 300ms
+});
+
+// Page reveal animation - fixed version
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with reveal class
+  const revealElements = document.querySelectorAll('.reveal');
+  console.log('Found', revealElements.length, 'elements with reveal class');
+  
+  // Add active class after a small delay to trigger animation
+  setTimeout(() => {
+    revealElements.forEach(element => {
+      element.classList.add('activex');
+      console.log('Added active class to element', element);
+    });
+  }, 300);
+});
+
+
     document.getElementById('search').addEventListener('input', function() {
       const searchText = this.value.toLowerCase();
       const heroes = document.querySelectorAll('.hero');
