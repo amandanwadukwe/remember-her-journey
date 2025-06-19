@@ -139,35 +139,96 @@ primaryNavLinks.forEach(link => {
     }
 
 
-    // Page reveal animation
+    // REPLACE all your reveal animation code with this single clean version
+
+// Scroll reveal animation
 document.addEventListener('DOMContentLoaded', function() {
+  console.log("Setting up scroll reveal animation");
+  
   // Get all elements with reveal class
   const revealElements = document.querySelectorAll('.reveal');
   console.log('Found', revealElements.length, 'elements with reveal class');
   
-  // Add active class after a small delay to trigger animation
-  setTimeout(() => {
-    revealElements.forEach(element => {
-      element.classList.add('activex');
-      console.log('Added active class to element', element);
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // If element is in view
+      if (entry.isIntersecting) {
+        entry.target.classList.add('activex'); // Using activex to match your CSS
+        console.log('Element is now visible:', entry.target);
+      }
     });
-  }, 300); // Increased delay to 300ms
+  }, {
+    threshold: 0.1, // Trigger when at least 10% of the element is visible
+    rootMargin: '0px 0px -50px 0px' // Trigger slightly before the element enters the viewport
+  });
+
+  // Observe each reveal element
+  revealElements.forEach(element => {
+    observer.observe(element);
+  });
 });
 
-// Page reveal animation - fixed version
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all elements with reveal class
-  const revealElements = document.querySelectorAll('.reveal');
-  console.log('Found', revealElements.length, 'elements with reveal class');
+//     // Page reveal animation
+
+
+
+
+// // document.addEventListener('DOMContentLoaded', function() {
+// //   // Get all elements with reveal class
+// //   const revealElements = document.querySelectorAll('.reveal');
+// //   console.log('Found', revealElements.length, 'elements with reveal class');
   
-  // Add active class after a small delay to trigger animation
-  setTimeout(() => {
-    revealElements.forEach(element => {
-      element.classList.add('activex');
-      console.log('Added active class to element', element);
-    });
-  }, 300);
-});
+// //   // Add active class after a small delay to trigger animation
+// //   setTimeout(() => {
+// //     revealElements.forEach(element => {
+// //       element.classList.add('activex');
+// //       console.log('Added active class to element', element);
+// //     });
+// //   }, 300); // Increased delay to 300ms
+// // });
+
+// // Page reveal animation - fixed version
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Get all elements with reveal class
+//   const revealElements = document.querySelectorAll('.reveal');
+//   console.log('Found', revealElements.length, 'elements with reveal class');
+  
+//   // Add active class after a small delay to trigger animation
+//   setTimeout(() => {
+//     revealElements.forEach(element => {
+//       element.classList.add('activex');
+//       console.log('Added active class to element', element);
+//     });
+//   }, 300);
+// });
+
+// // Scroll reveal animation
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Get all elements with reveal class
+//   const revealElements = document.querySelectorAll('.reveal');
+  
+//   // Create an Intersection Observer
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       // If element is in view
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add('active');
+//       } else {
+//         // Optional: remove the class when scrolled out of view
+//         // entry.target.classList.remove('active');
+//       }
+//     });
+//   }, {
+//     threshold: 0.1, // Trigger when at least 10% of the element is visible
+//     rootMargin: '0px 0px -50px 0px' // Trigger slightly before the element enters the viewport
+//   });
+
+//   // Observe each reveal element
+//   revealElements.forEach(element => {
+//     observer.observe(element);
+//   });
+// });
 
 
     document.getElementById('search').addEventListener('input', function() {
