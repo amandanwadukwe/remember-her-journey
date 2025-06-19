@@ -51,7 +51,7 @@
   
   #chatOutput  > *:nth-child(odd) {
     width:fit-content;
-    max-width:20vw;
+    max-width:25vw;
     padding:1rem;
     border-radius:1vmax;
     font-size:.9rem;
@@ -78,10 +78,10 @@
     border-radius: 50vmax;
     margin: 1rem 0;
   }
-  
+/*   
   #sendBtn {
     width: 80px;
-  }
+  } */
 
   /* .help-modal a{
     padding:1rem;
